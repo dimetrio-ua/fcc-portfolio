@@ -50,13 +50,7 @@ body {
 	width: 100%;
 	position: relative;
 }
-.row {
-	height: 100%;
-	width: 95%;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-}
+/*navigation bar styles*/
 nav {
 	height:3em;
 	background-color: rgba(150, 150, 150, 1.0);
@@ -83,6 +77,7 @@ nav a:hover, .navigation a:hover {
   background: rgba(150, 150, 150, 0.5);
 	color: rgba(240, 240, 240, 1.0);
 }
+/*end of navigation bar styles*/
 .section {
 	height: 100%;
 	position: relative;
