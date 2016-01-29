@@ -1,4 +1,4 @@
-/*css reset start*/
+/*---------css reset start---------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,7 +42,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/*css reset ending*/
+/*---------css reset ending---------*/
 html, body {
 	height: 100%;
 }
@@ -50,7 +50,7 @@ body {
 	width: 100%;
 	position: relative;
 }
-/*navigation bar styles*/
+/*---------navigation bar styles---------*/
 nav {
 	height:3em;
 	background-color: rgba(150, 150, 150, 1.0);
@@ -77,13 +77,13 @@ nav a:hover, .navigation a:hover {
   background: rgba(150, 150, 150, 0.5);
 	color: rgba(240, 240, 240, 1.0);
 }
-/*end of navigation bar styles*/
+/*---------base sections styles---------*/
 .section {
 	height: 100%;
 	position: relative;
 	display: block;
 }
-	/* before pseudo-element is for transparent background*/
+	/*before pseudo-element is for transparent background*/
 .section::before {
 	content: '';
 	opacity: 0.6;
@@ -114,13 +114,84 @@ footer {
 	height: 150px;
 	background-color: rgba(150, 150, 150, 1.0);
 }
-h1 {
-	font-size: 4em;
-	text-align: center;
-	padding-top: 150px;
+/*-------sections content styles----------*/
+h1, h2, p, a {
+	font-family: 'Righteous', cursive;
 }
-h2 {
-	font-size: 3em;
+/*-------'intro' section content styles----------*/
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.intro h1, .intro p {
 	text-align: center;
-	padding-top: 150px;
+	text-transform: capitalize;
+}
+.intro h1 {
+	font-size: 3.2em;
+	text-shadow: 2px 2px 1px grey;
+}
+.intro p {
+	font-size: 1.2em;
+	padding-top: 10px;
+	/*padding-bottom: 15px;
+	border-bottom: 5px ridge rgba(230, 230, 230, 0.7);*/
+}
+.intro ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 15px;
+}
+.intro a {
+	text-decoration: none;
+	border: 2px solid black;
+	margin-right: 20px;
+	font-size: 1.5em;
+	padding: 5px 5px;
+	color: rgba(0, 0, 0, 1.0);
+	display: block;
+}
+.intro a:hover {
+	transition: all 0.4s ease-out;
+	background-color: rgba(0, 0, 0, 1.0);
+	color: rgba(255, 255, 255, 1.0);
+	transform: scale(1.1);
+}
+.intro i {
+	display: inline-block;
+	width: 25px;
+	height: 24px;
+	background-image: url(../images/spritesheet.png);
+	background-repeat: no-repeat;
+	margin: 0 5px 0 0;
+	background-size: 186px 31px;
+	vertical-align: bottom;
+}
+.intro li:hover i {
+	transition: all .4s ease-out;
+	background-image: url(../images/spritesheet_neg.png);
+	transform: scale(1.1);
+}
+.intro li:nth-child(1) i {
+	width: 18px;
+	background-position: -37px center;
+}
+.intro li:nth-child(2) i {
+	background-position: -97px center;
+}
+.intro li:nth-child(3) i {
+	background-position: -3px center;
+}
+.intro li:nth-child(4) i {
+	background-position: -65px center;
+}
+.intro li:nth-child(5) i {
+	background-position: -127px center;
+}
+/*-------'about' section content styles----------*/
+.about h2 {
+	font-size: 2em;
+	text-transform: capitalize;
 }
