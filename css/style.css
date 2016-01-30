@@ -257,3 +257,62 @@ h1, h2, p, a {
 	margin-bottom: 20px;
 	font-size: 1.5em;
 }
+/*-------'contact' section content styles----------*/
+.contact {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.contact h2 {
+	font-size: 2.0em;
+}
+.contact a {
+	text-decoration: none;
+	border: 2px solid black;
+	margin-right: 20px;
+	font-size: 1.5em;
+	padding: 5px 5px;
+	color: rgba(0, 0, 0, 1.0);
+	display: block;
+	box-shadow: 2px 2px;
+	margin-bottom: 10px;
+}
+.contact a:hover {
+	transition: all 0.4s ease-out;
+	background-color: rgba(0, 0, 0, 1.0);
+	color: rgba(255, 255, 255, 1.0);
+	transform: scale(1.1);
+}
+.contact i {
+	display: inline-block;
+	width: 25px;
+	height: 24px;
+	background-image: url(../images/spritesheet.png);
+	background-repeat: no-repeat;
+	margin: 0 5px 0 0;
+	background-size: 186px 31px;
+	vertical-align: bottom;
+}
+.contact li:hover i {
+	transition: all .4s ease-out;
+	background-image: url(../images/spritesheet_neg.png);
+	transform: scale(1.1);
+}
+.contact li:nth-child(1) i {
+	width: 18px;
+	background-position: -37px center;
+}
+.contact li:nth-child(2) i {
+	background-position: -97px center;
+}
+.contact li:nth-child(3) i {
+	background-position: -3px center;
+}
+.contact li:nth-child(4) i {
+	background-position: -65px center;
+}
+.contact li:nth-child(5) i {
+	background-position: -127px center;
+}
+/*-------footer section content styles----------*/
