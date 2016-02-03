@@ -141,8 +141,6 @@ a {
 }
 .intro p {
 	padding-top: 10px;
-	/*padding-bottom: 15px;
-	border-bottom: 5px ridge rgba(230, 230, 230, 0.7);*/
 }
 .intro ul {
 	display: flex;
@@ -206,6 +204,7 @@ a {
 }
 .about p a {
 	color: rgba(255, 255, 255, 1.0);
+	font-size: 1.0em;
 }
 .about p a:hover {
 	color: rgba(0, 100, 0, 1);
@@ -223,6 +222,7 @@ a {
 	height: 300px;
 	background: url(../images/avatar.jpg) no-repeat;
 	border-radius: 50%;
+	background-size: contain;
 }
 /*-------'portfolio' section content styles----------*/
 .portfolio {
@@ -344,8 +344,248 @@ footer p {
 	color: rgba(0, 0, 0, 0.7);
 }
 /*-------@media styles----------*/
-/* Laptops ----------- */
-@media screen and (min-width : 1367px) {
+@media screen and (max-width : 480px) {
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.2em;
+	}
+	p {
+		font-size: 1.0em;
+	}
+	a {
+		font-size: 1.2em;
+	}
+	.intro {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.intro ul {
+		display: block;
+	}
+	.intro a {
+		margin-bottom: 20px;
+	}
+	.about {
+		flex-direction: column;
+	}
+	.about article {
+		width:80%;
+	}
+	.about .avatar {
+		width: 150px;
+		height: 150px;
+	}
+	.portfolio ul {
+		justify-content: space-around;
+		align-items: stretch;
+	}
+	.portfolio ul li {
+		margin-left: 0px;
+	}
+	.portfolio a {
+		width: 150px;
+		height: 100px;
+	}
+	.portfolio a div {
+		width: 150px;
+	}
+	.contact {
+		flex-direction: column;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.contact h2{
+/*?????????????????????????????????*/
+		display: inline-block;
+		margin-bottom: 30px;
+	}
+	.contact a {
+		margin-bottom: 15px;
+	}
+}
+/* Android HD----------- */
+@media screen and (min-width : 480px) and (max-width : 767px) {
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.2em;
+	}
+	p {
+		font-size: 1.0em;
+	}
+	a {
+		font-size: 1.2em;
+	}
+	.about .avatar {
+		width: 150px;
+		height: 150px;
+	}
+	.portfolio h2 {
+		font-size: 1.7em;
+	}
+	.portfolio p {
+		font-size: 1.3em;
+	}
+	.portfolio a {
+		width: 150px;
+		height: 100px;
+	}
+	.portfolio a div {
+		width: 150px;
+	}
+	.portfolio ul li {
+		margin-left: 60px;
+	}
+}
+@media screen and (min-width : 480px) and (max-width : 767px) and (orientation: portrait) {
+	.intro {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.intro ul {
+		display: block;
+	}
+	.intro a, .contact a {
+		font-size: 1.5em;
+	}
+	.intro a {
+		margin-bottom: 20px;
+	}
+	.portfolio ul {
+		justify-content: space-around;
+		align-items: stretch;
+	}
+	.portfolio ul li {
+		margin-left: 20px;
+	}
+	.contact {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.contact h2{
+		margin-bottom: 30px;
+	}
+	.contact a {
+		margin-bottom: 15px;
+	}
+}
+/* iPad----------- */
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+	h1 {
+		font-size: 2.2em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	p, a {
+		font-size: 1.0em;
+	}
+	.intro i, .contact i {
+		width: 20px;
+		height: 19px;
+		background-size: 151px 26px;
+	}
+	.intro li:nth-child(1) i, .contact li:nth-child(1) i {
+		width: 14px;
+		background-position: -30px center;
+	}
+	.intro li:nth-child(2) i, .contact li:nth-child(2) i {
+		background-position: -78px center;
+	}
+	.intro li:nth-child(4) i, .contact li:nth-child(4) i {
+		background-position: -53px center;
+	}
+	.intro li:nth-child(5) i, .contact li:nth-child(5) i {
+		width: 21px;
+		background-position: -103px center;
+	}
+	.about .avatar {
+		width: 200px;
+		height: 200px;
+	}
+	.portfolio ul li {
+		margin-left: 2%;
+	}
+	.portfolio ul li:nth-child(-n+3) {
+		margin-bottom: 2%;
+	}
+}
+@media screen and (min-width : 768px) and (max-width : 1024px) and (orientation: portrait) {
+	body {
+		height: 100%;
+	}
+	.section {
+		height: 50%;
+	}
+	.portfolio a {
+		width: 225px;
+		height: 150px;
+	}
+	.portfolio a div {
+		width: 225px;
+	}
+	.contact a {
+		margin-bottom: 15px;
+	}
+}
+@media screen and (min-width : 768px) and (max-width : 1024px) and (orientation: landscape) {
+	.portfolio a {
+		width: 255px;
+		height: 170px;
+	}
+	.portfolio a div {
+		width: 255px;
+	}
+	.contact a {
+		margin-bottom: 15px;
+	}
+}
+/* Laptops LoRes----------- */
+@media screen and (min-width : 1025px) and (max-width : 1280px) {
+	h1 {
+		font-size: 2.7em;
+	}
+	h2 {
+		font-size: 2.0em;
+	}
+	p {
+		font-size: 1.3em;
+	}
+	.about .avatar {
+		width: 250px;
+		height: 250px;
+	}
+	.portfolio a {
+		width: 300px;
+		height: 200px;
+	}
+	.portfolio ul li {
+		margin-left: 2%;
+	}
+	.portfolio ul li:nth-child(-n+3) {
+		margin-bottom: 2%;
+	}
+	.portfolio a div {
+		width: 300px;
+	}
+}
+/* Laptops----------- */
+@media screen and (min-width : 1281px) and (max-width : 1366px){
+}
+/* Laptops HDR----------- */
+@media screen and (min-width : 1367px) and (max-width : 1600px) {
+	h1 {
+		font-size: 3.7em;
+	}
+	.about .avatar {
+		width: 350px;
+		height: 350px;
+	}
 	.portfolio a {
 		width: 375px;
 		height: 250px;
@@ -354,8 +594,24 @@ footer p {
 		width: 375px;
 	}
 }
-/* Desktops ----------- */
-@media screen and (min-width : 1601px) {
+/* HDR----------- */
+@media screen and (min-width : 1601px) and (max-width : 1921px) {
+	h1 {
+		font-size: 4.2em;
+	}
+	h2 {
+		font-size: 3.0em;
+	}
+	p {
+		font-size: 2.0em;
+	}
+	a {
+		font-size: 2.0em;
+	}
+	.about .avatar {
+		width: 400px;
+		height: 400px;
+	}
 	.portfolio a {
 		width: 450px;
 		height: 300px;
@@ -363,9 +619,37 @@ footer p {
 	.portfolio a div {
 		width: 450px;
 	}
+	footer a {
+		font-size: 1.2em;
+	}
 }
-/* Large Desktops ----------- */
-@media screen and (min-width : 1921px) {
+/* HD ----------- */
+@media screen and (min-width : 1921px) and (max-width : 2180px) {
+	nav {
+		height: 6em;
+	}
+	nav a, .navigation a {
+		font-size: 2.0em;
+	}
+	h1 {
+		font-size: 4.7em;
+	}
+	h2 {
+		font-size: 3.5em;
+	}
+	p {
+		font-size: 2.0em;
+	}
+	a {
+		font-size: 2.0em;
+	}
+	.intro i, .contact i {
+		vertical-align: middle;
+	}
+	.about .avatar {
+		width: 450px;
+		height: 450px;
+	}
 	.portfolio a {
 		width: 450px;
 		height: 300px;
@@ -386,5 +670,64 @@ footer p {
 	.portfolio p {
 		margin-bottom: 50px;
 		font-size: 2.5em;
+	}
+	footer a {
+		font-size: 1.2em;
+	}
+}
+/* UHD ----------- */
+@media screen and (min-width : 2181px) {
+	nav {
+		height: 6em;
+	}
+	nav a, .navigation a {
+		font-size: 2em;
+	}
+	h1 {
+		font-size: 5.2em;
+	}
+	h2 {
+		font-size: 4.0em;
+	}
+	p {
+		font-size: 2.5em;
+	}
+	a {
+		font-size: 2.5em;
+	}
+	.intro i, .contact i {
+		vertical-align: middle;
+	}
+	.about .avatar {
+		width: 500px;
+		height: 500px;
+	}
+	.portfolio a {
+		width: 450px;
+		height: 300px;
+	}
+	.portfolio ul li {
+		margin-left: 8%;
+	}
+	.portfolio ul li:nth-child(-n+3) {
+		margin-bottom: 7%;
+	}
+	.portfolio a div {
+		width: 450px;
+	}
+	.portfolio h2 {
+		margin-bottom: 3%;
+		font-size: 4.0em;
+	}
+	.portfolio p {
+		margin-bottom: 3%;
+		font-size: 3.0em;
+	}
+	footer a {
+		font-size: 1.7em;
+	}
+	footer p {
+		margin-top: 10px;
+		font-size: 1.0em;
 	}
 }
