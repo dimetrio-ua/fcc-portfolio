@@ -55,10 +55,21 @@ table {
   display: block;
   padding: 1em;
   color: black;
+	border: 1px solid red;
 }
 .navigation a:hover{
 	transform: scale(1.2);
 }
+@media screen and (max-width : 580px) {
+	.navigation {
+		width: 100%;
+		justify-content: space-around;
+	}
+
+	.navigation a:hover{
+		transform: none;
+}
+
 @media screen and (min-width : 825px) and (max-width : 1280px) {
 	.navigation {
 		background: red;

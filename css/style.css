@@ -50,7 +50,7 @@ body {
 	width: 100%;
 }
 /*---------navigation bar styles---------*/
-nav {
+.fullnav {
 	height:3em;
 	background-color: rgba(150, 150, 150, 1.0);
 	position: fixed;
@@ -64,7 +64,7 @@ nav {
 	display: flex;
 	justify-content: flex-end;
 }
-nav a, .navigation a {
+.fullnav a, .navigation a {
 	background-color: rgba(180, 180, 180, 1.0);
 	display: block;
 	padding: 1em;
@@ -72,9 +72,15 @@ nav a, .navigation a {
 	color: rgba(0, 0, 0, 1.0);
 	text-transform: uppercase;
 }
-nav a:hover, .navigation a:hover {
+.fullnav a:hover, .navigation a:hover {
   background: rgba(150, 150, 150, 0.5);
 	color: rgba(240, 240, 240, 1.0);
+}
+/*---------compcat navigation bar styles--*/
+.compactnav {
+	width: 100%;
+	z-index: 199;
+	overflow: hidden;
 }
 /*---------base sections styles---------*/
 .section {
@@ -344,7 +350,7 @@ footer p {
 	color: rgba(0, 0, 0, 0.7);
 }
 /*-------@media styles----------*/
-@media screen and (max-width : 480px) {
+@media screen and (max-width : 479px) {
 	h1 {
 		font-size: 2em;
 	}
@@ -356,6 +362,24 @@ footer p {
 	}
 	a {
 		font-size: 1.2em;
+	}
+	.fullnav {
+		background-color: rgba(180, 180, 180, 1.0);
+		height: 2.5em;
+	}
+	.fullnav>a {
+		display: none;
+	}
+	.navigation {
+		width: 100%;
+		align-items: stretch;
+		justify-content: space-between;
+	}
+	.navigation a {
+		font-size: smaller;
+	}
+	.navigation a:hover {
+		background-color: rgba(150, 150, 150, 1.0);
 	}
 	.intro {
 		flex-direction: column;
@@ -370,11 +394,13 @@ footer p {
 	}
 	.about {
 		flex-direction: column;
+		justify-content: center;
 	}
 	.about article {
 		width:80%;
 	}
 	.about .avatar {
+		margin-top: 2em;
 		width: 150px;
 		height: 150px;
 	}
@@ -395,15 +421,16 @@ footer p {
 	.contact {
 		flex-direction: column;
 		justify-content: center;
-		flex-wrap: wrap;
 	}
 	.contact h2{
-/*?????????????????????????????????*/
-		display: inline-block;
-		margin-bottom: 30px;
+		margin-bottom: 2em;
+		text-align: center;
 	}
 	.contact a {
-		margin-bottom: 15px;
+		margin-bottom: 1em;
+	}
+	footer a:hover {
+		color: rgba(0, 0, 0, 0.7);
 	}
 }
 /* Android HD----------- */
@@ -419,6 +446,26 @@ footer p {
 	}
 	a {
 		font-size: 1.2em;
+	}
+	.intro ul {
+	}
+	.intro a {
+		font-size: smaller;
+	}
+	.intro li:last-child a {
+		margin-right: 0;
+	}
+	.intro a:hover, .contact a:hover {
+		background-color: inherit;
+		color: inherit;
+		transform: none;
+	}
+	.intro li:hover i, .contact li:hover i {
+		transform: none;
+		background-image: url(../images/spritesheet.png);
+	}
+	.about article {
+		width: 50%;
 	}
 	.about .avatar {
 		width: 150px;
@@ -439,6 +486,9 @@ footer p {
 	}
 	.portfolio ul li {
 		margin-left: 60px;
+	}
+	.portfolio a:hover {
+		box-shadow: none;
 	}
 }
 @media screen and (min-width : 480px) and (max-width : 767px) and (orientation: portrait) {
@@ -625,10 +675,10 @@ footer p {
 }
 /* HD ----------- */
 @media screen and (min-width : 1921px) and (max-width : 2180px) {
-	nav {
+	.fullnav {
 		height: 6em;
 	}
-	nav a, .navigation a {
+	.fullnav a, .navigation a {
 		font-size: 2.0em;
 	}
 	h1 {
@@ -677,10 +727,10 @@ footer p {
 }
 /* UHD ----------- */
 @media screen and (min-width : 2181px) {
-	nav {
+	.fullnav {
 		height: 6em;
 	}
-	nav a, .navigation a {
+	.fullnav a, .navigation a {
 		font-size: 2em;
 	}
 	h1 {
